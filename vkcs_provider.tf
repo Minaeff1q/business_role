@@ -12,7 +12,7 @@ provider "vkcs" {
     username = "minaevda21@st.ithub.ru"
 
     # The password of the account
-    password = "Im30@mail.ru"
+    password = ""
 
     # The tenant token can be taken from the project Settings tab - > API keys.
     # Project ID will be our token.
