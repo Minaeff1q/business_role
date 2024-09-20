@@ -28,6 +28,11 @@ resource "vkcs_compute_instance" "vm1" {
     fixed_ip_v4 = "192.168.254.100"
   }
 
+  user_data = <<-EOF
+    packages:
+	  - nginx
+    EOF
+
   depends_on = [
     vkcs_networking_network.minaev,
     vkcs_networking_subnet.minaev
@@ -55,6 +60,11 @@ resource "vkcs_compute_instance" "vm2" {
     uuid = vkcs_networking_network.minaev.id
     fixed_ip_v4 = "192.168.254.200"
   }
+
+  user_data = <<-EOF
+    packages:
+	  - nginx
+    EOF
 
   depends_on = [
     vkcs_networking_network.minaev,
